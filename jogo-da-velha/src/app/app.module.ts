@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JogoDaVelhaModule } from './jogo-da-velha';
 
@@ -11,7 +10,6 @@ import { JogoDaVelhaModule } from './jogo-da-velha';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     JogoDaVelhaModule
   ],
   providers: [],
