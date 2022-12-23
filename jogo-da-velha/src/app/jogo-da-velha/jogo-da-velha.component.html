@@ -1,55 +1,58 @@
-<div>
-    <h2>Jogo da velha</h2>
-    
-    <!-- tela inicial -->
-    <div class="principal" *ngIf="showInicio">
-      <a href="#" 
-         class="botao"
-         (click)="iniciarPartida()">
-         Iniciar
-      </a>
-    </div>
-    <!-- fim tela inicial -->
+<div style="margin-top: 50px;"class="container text-center">
+  <div class="row justify-content-md-center" >
+    <div class="col-lg-6" >
+     
+      <h2 class="bg-dark">Jogo da velha</h2>
 
-    <!-- tabuleiro -->
+      <!-- tela inicial -->
+      <div class="principal" *ngIf="showInicio">
+        <a href="#" 
+           class="botao"
+           (click)="iniciarPartida()">
+           Iniciar
+        </a>
+      </div>
+      <!-- fim tela inicial -->
+
+      <!-- tabuleiro -->
     <div *ngIf="showTabuleiro">
       <ul>
-        <li class="border-bottom border-right"
+        <li class="kz-border-bottom border-right"
           [ngClass]="{
             'kz-img-x': exibirX(0, 0),
             'kz-img-o': exibirO(0, 0),
             'kz-cor-vitoria': exibirVitoria(0, 0)}"
           (click)="jogar(0, 0)">
         </li>
-        <li class="border-bottom border-right"
+        <li class="kz-border-bottom border-right"
           [ngClass]="{
             'kz-img-x': exibirX(0, 1),
             'kz-img-o': exibirO(0, 1),
             'kz-cor-vitoria': exibirVitoria(0, 1)}"
           (click)="jogar(0, 1)">
         </li>
-        <li class="border-bottom"
+        <li class="kz-border-bottom"
           [ngClass]="{
             'kz-img-x': exibirX(0, 2),
             'kz-img-o': exibirO(0, 2),
             'kz-cor-vitoria': exibirVitoria(0, 2)}"
           (click)="jogar(0, 2)">
         </li>
-        <li class="border-bottom border-right"
+        <li class="kz-border-bottom border-right"
           [ngClass]="{
             'kz-img-x': exibirX(1, 0),
             'kz-img-o': exibirO(1, 0),
             'kz-cor-vitoria': exibirVitoria(1, 0)}"
           (click)="jogar(1, 0)">
         </li>
-        <li class="border-bottom border-right"
+        <li class="kz-border-bottom border-right"
           [ngClass]="{
             'kz-img-x': exibirX(1, 1),
             'kz-img-o': exibirO(1, 1),
             'kz-cor-vitoria': exibirVitoria(1, 1)}"
           (click)="jogar(1, 1)">
         </li>
-        <li class="border-bottom"
+        <li class="kz-border-bottom"
           [ngClass]="{
             'kz-img-x': exibirX(1, 2),
             'kz-img-o': exibirO(1, 2),
@@ -79,21 +82,23 @@
       </ul>
     </div>
     <!-- fim tabuleiro --> 
-  
-    <!-- tela final -->
-    <div *ngIf="showFinal">
-      <span>
-      <p *ngIf="jogador===2">Você venceu!!!</p>
-      <p *ngIf="jogador===1">Você perdeu...</p>
-      <p *ngIf="jogador===0">O jogo terminou empatado...</p>
-      <br />
-      <a href="#" 
-           class="botao"
-           (click)="novoJogo()">
-           Jogar novamente
-        </a>
-      </span>
-    </div><!-- fim tela final -->
-  
+        <!-- tela final -->
+        <div id="final" *ngIf="showFinal">
+          <span>
+          <p *ngIf="jogador===2">Você venceu!!!</p>
+          <p *ngIf="jogador===1">Você perdeu...</p>
+          <p *ngIf="jogador===0">O jogo terminou empatado...</p>
+          <br />
+          <a href="#" 
+               class="botao"
+               (click)="novoJogo()">
+               Jogar novamente
+            </a>
+          </span>
+        </div>
+        <!-- fim tela final -->
+    </div>
   </div>
+</div>
+
   
