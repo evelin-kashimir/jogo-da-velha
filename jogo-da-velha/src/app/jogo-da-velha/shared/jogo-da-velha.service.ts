@@ -47,7 +47,7 @@ export class JogoDaVelhaService {
 
   /** Método acessor para retornar se o jogo foi iniciado ou não */
   get showInicio(): boolean {
-    return this.showInicio;
+    return this._showInicio;
   }
 
   /** Método acessor para retornar se o jogo foi finalizado */
@@ -133,6 +133,7 @@ export class JogoDaVelhaService {
     return fim;
   }
 
+  /** Exibe a jogada da CPU */
   cpuJogar(): void {
     //verifica jogada de vitória
     let jogada: number[] = this.obterJogada(this.O);
@@ -162,6 +163,7 @@ export class JogoDaVelhaService {
     this._jogador = (this._jogador === this.X) ? this.O : this.X;
   }
 
+  /** Obtem a jogada do jogador da vez */
   obterJogada(jogador: number): number[] {
     let tabela = this.tabuleiro;
     for (let lin = 0; lin < this.TAM_TAB; lin++) {
