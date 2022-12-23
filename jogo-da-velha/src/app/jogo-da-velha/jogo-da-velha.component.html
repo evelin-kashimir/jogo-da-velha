@@ -14,15 +14,68 @@
     <!-- tabuleiro -->
     <div *ngIf="showTabuleiro">
       <ul>
-        <li class="kz-border-bottom kz-border-right"></li>
-        <li class="kz-border-bottom kz-border-right"></li>
-        <li class="kz-border-bottom"></li>
-        <li class="kz-border-bottom kz-border-right"></li>
-        <li class="kz-border-bottom kz-border-right"></li>
-        <li class="kz-border-bottom"></li>
-        <li class="kz-border-right"></li>
-        <li class="kz-border-right"></li>
-        <li></li>
+        <li class="border-bottom border-right"
+          [ngClass]="{
+            'kz-img-x': exibirX(0, 0),
+            'kz-img-o': exibirO(0, 0),
+            'kz-cor-vitoria': exibirVitoria(0, 0)}"
+          (click)="jogar(0, 0)">
+        </li>
+        <li class="border-bottom border-right"
+          [ngClass]="{
+            'kz-img-x': exibirX(0, 1),
+            'kz-img-o': exibirO(0, 1),
+            'kz-cor-vitoria': exibirVitoria(0, 1)}"
+          (click)="jogar(0, 1)">
+        </li>
+        <li class="border-bottom"
+          [ngClass]="{
+            'kz-img-x': exibirX(0, 2),
+            'kz-img-o': exibirO(0, 2),
+            'kz-cor-vitoria': exibirVitoria(0, 2)}"
+          (click)="jogar(0, 2)">
+        </li>
+        <li class="border-bottom border-right"
+          [ngClass]="{
+            'kz-img-x': exibirX(1, 0),
+            'kz-img-o': exibirO(1, 0),
+            'kz-cor-vitoria': exibirVitoria(1, 0)}"
+          (click)="jogar(1, 0)">
+        </li>
+        <li class="border-bottom border-right"
+          [ngClass]="{
+            'kz-img-x': exibirX(1, 1),
+            'kz-img-o': exibirO(1, 1),
+            'kz-cor-vitoria': exibirVitoria(1, 1)}"
+          (click)="jogar(1, 1)">
+        </li>
+        <li class="border-bottom"
+          [ngClass]="{
+            'kz-img-x': exibirX(1, 2),
+            'kz-img-o': exibirO(1, 2),
+            'kz-cor-vitoria': exibirVitoria(1, 2)}"
+          (click)="jogar(1, 2)">
+        </li>
+        <li class="border-right"
+          [ngClass]="{
+            'kz-img-x': exibirX(2, 0),
+            'kz-img-o': exibirO(2, 0),
+            'kz-cor-vitoria': exibirVitoria(2, 0)}"
+          (click)="jogar(2, 0)">
+        </li>
+        <li class="border-right"
+          [ngClass]="{
+            'kz-img-x': exibirX(2, 1),
+            'kz-img-o': exibirO(2, 1),
+            'kz-cor-vitoria': exibirVitoria(2, 1)}"
+          (click)="jogar(2, 1)">
+        </li>
+        <li [ngClass]="{
+            'kz-img-x': exibirX(2, 2),
+            'kz-img-o': exibirO(2, 2),
+            'kz-cor-vitoria': exibirVitoria(2, 2)}"
+          (click)="jogar(2, 2)">
+        </li>
       </ul>
     </div>
     <!-- fim tabuleiro --> 

@@ -29,4 +29,22 @@ export class JogoDaVelhaComponent {
   iniciarPartida(): void {
     this.jogoService.iniciarJogo();
   }
+
+  jogar(posX: number, posY: number): void {
+    this.jogoService.jogar(posX, posY);
+    console.log(posX, posY);
+  }
+
+  exibirX(posX: number, posY: number): boolean {
+    return this.jogoService.exibirX(posX, posY);
+  }
+
+  exibirO(posX: number, posY: number): boolean {
+    return this.jogoService.exibirO(posX, posY);
+  }
+
+  exibirVitoria(posX: number, posy: number) {
+    return this.jogoService.exibirVitoria(posX, posy);
+  }
+
 }

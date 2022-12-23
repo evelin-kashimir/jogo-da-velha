@@ -31,17 +31,17 @@ export class JogoDaVelhaService {
     this._showInicio = true;
     this._showTabuleiro = false;
     this._showFinal = false;
+    this.inicializarTabuleiro();
     this._jogador= this.X;
     this.numMovimentos = 0;
     this.vitoria = false;
-    this.inicializarTabuleiro();
   }
 
   /** Inicializa o tabuleiro do jogo com os campos vazios */
   inicializarTabuleiro(): void {
     this.tabuleiro = [this.TAM_TAB];
-    for(let campo of this.tabuleiro){
-      campo = [this.VAZIO, this.VAZIO, this.VAZIO];
+    for(let i = 0; i < this.TAM_TAB; i++){
+      this.tabuleiro[i] = [this.VAZIO, this.VAZIO, this.VAZIO];
     }
   }
 
@@ -74,7 +74,7 @@ export class JogoDaVelhaService {
   /** Realiza uma jogada dado as coordenadas do tabuleiro */
   jogar(posX: number, posY: number){
     //jogada inválida
-    if(this.tabuleiro[posX][posY] !== this.VAZIO || this.vitoria){
+    if(this.tabuleiro[posX][posY] != this.VAZIO || this.vitoria){
       return;
     }
 

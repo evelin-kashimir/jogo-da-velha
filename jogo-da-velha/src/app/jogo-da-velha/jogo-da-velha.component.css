@@ -40,11 +40,11 @@ ul li {
     cursor: pointer;
 }
 
-.kz-border-bottom {
+.border-bottom {
 	border-bottom: 8px solid #333;
 }
 
-.kz-border-right {
+.border-right {
 	border-right: 8px solid #333;
 }
 
