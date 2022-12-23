@@ -2,7 +2,7 @@
   <div class="row justify-content-md-center" >
     <div class="col-lg-6" >
      
-      <h2 class="bg-dark">Jogo da velha</h2>
+      <h2>Jogo da velha</h2>
 
       <!-- tela inicial -->
       <div class="principal" *ngIf="showInicio">
@@ -85,9 +85,9 @@
         <!-- tela final -->
         <div id="final" *ngIf="showFinal">
           <span>
-          <p *ngIf="jogador===2">Você venceu!!!</p>
-          <p *ngIf="jogador===1">Você perdeu...</p>
-          <p *ngIf="jogador===0">O jogo terminou empatado...</p>
+          <p [ngStyle]="{'color': '#52b788'}" *ngIf="jogador===2">Você venceu!!!</p>
+          <p [ngStyle]="{'color': 'red'}" *ngIf="jogador===1">Você perdeu...</p>
+          <p [ngStyle]="{'color': '#f77f00'}" *ngIf="jogador===0">O jogo terminou empatado...</p>
           <br />
           <a href="#" 
                class="botao"
