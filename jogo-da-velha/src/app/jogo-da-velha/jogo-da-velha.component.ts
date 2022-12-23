@@ -47,4 +47,11 @@ export class JogoDaVelhaComponent {
     return this.jogoService.exibirVitoria(posX, posy);
   }
 
+  get jogador(): number {
+    return this.jogoService.getJogador;
+  }
+
+  novoJogo(): void{
+    this.jogoService.novoJogo();
+  }
 }
